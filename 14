@@ -1,4 +1,4 @@
-
+1.
 class Solution:
     def longestCommonPrefix(self, strs: List[str]) -> str:
         list = []
@@ -11,3 +11,17 @@ class Solution:
             return(strs[1][0:2])
         else:
             return("")
+
+2.
+list = []
+for i in range(0,(len(strs))):
+    new_str = strs[i]
+    
+    for k in range(0, len(new_str)):
+        new_str_2 = new_str[:k]
+        list.append(new_str_2)
+
+list_li = set(list)
+list_2 = []
+for j in list_li:
+    list_2.append([j,list.count(j),len(j)])
