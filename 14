@@ -25,3 +25,28 @@ list_li = set(list)
 list_2 = []
 for j in list_li:
     list_2.append([j,list.count(j),len(j)])
+
+
+3.
+        list_1 = []
+        for i in range(0,(len(strs))):
+            new_str = strs[i]
+
+            for k in range(0, len(new_str)):
+                new_str_2 = new_str[:k]
+                list_1.append(new_str_2)
+
+        list_li = set(list_1)
+        list_2 = []
+        for j in list_li:
+            list_2.append([j,list.count(j),len(j)])
+
+        list_3 = []
+        for p in range(0,len(list_li)):
+            if list_2[p][1] == len(strs):
+                list_3.append([list_2[p][0], list_2[p][2]])
+
+        a = sorted(list_3)
+        b = a[-1]
+        c = b[0]
+        print(c)
